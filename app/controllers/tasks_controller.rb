@@ -9,10 +9,12 @@ class TasksController < ApplicationController
   end
 
   def new
+    raise
     @task = Task.new
   end
 
   def create
+
     @task = Task.new(task_params)
     if @task.save
       redirect_to task_path(@task)
